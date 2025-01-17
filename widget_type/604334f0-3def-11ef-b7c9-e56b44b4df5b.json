@@ -1,0 +1,43 @@
+{
+  "entityType" : "WIDGET_TYPE",
+  "entity" : {
+    "fqn" : "new",
+    "name" : "new",
+    "deprecated" : false,
+    "image" : "tb-image;/api/images/system/timeseries_table_system_widget_image.png",
+    "description" : "Displays time series data for one or more entities. Data for each entity is displayed in a separate tab. Columns are configured to display entity fields, attributes, or telemetry data. Highly customizable via cell content functions and row style functions.",
+    "descriptor" : {
+      "type" : "timeseries",
+      "sizeX" : 8,
+      "sizeY" : 6.5,
+      "resources" : [ ],
+      "templateHtml" : "<tb-timeseries-table-widget \n    [ctx]=\"ctx\">\n</tb-timeseries-table-widget>",
+      "templateCss" : "",
+      "controllerScript" : "self.onInit = function() {\r\n    // Initialize the widget\r\n}\r\n\r\nself.onDataUpdated = function() {\r\n    updateTable(self.ctx.data);\r\n}\r\n\r\nself.onLatestDataUpdated = function() {\r\n    updateTable(self.ctx.data);\r\n}\r\n\r\nself.onEditModeChanged = function() {\r\n    // Handle edit mode changes if necessary\r\n}\r\n\r\nself.typeParameters = function() {\r\n    return {\r\n        ignoreDataUpdateOnIntervalTick: true,\r\n        hasAdditionalLatestDataKeys: true,\r\n        defaultDataKeysFunction: function() {\r\n            return [\r\n                { name: 'deviceName', label: 'Devices', type: 'attribute', units: '', decimals: 0 },\r\n                { name: 'amperage', label: 'Amperage', type: 'timeseries', units: 'A', decimals: 0 },\r\n                { name: 'consumption10', label: 'Consumption10', type: 'timeseries', units: 'kWh', decimals: 0 },\r\n                { name: 'current', label: 'Current', type: 'timeseries', units: 'A', decimals: 0 },\r\n                { name: 'consumption3', label: 'Consumption3', type: 'timeseries', units: 'kWh', decimals: 0 },\r\n                { name: 'energy', label: 'Energy', type: 'timeseries', units: 'kWh', decimals: 0 },\r\n                { name: 'energy10', label: 'Energy10', type: 'timeseries', units: 'kWh', decimals: 0 }\r\n            ];\r\n        }\r\n    };\r\n}\r\n\r\nself.actionSources = function() {\r\n    return {\r\n        'actionCellButton': {\r\n            name: 'widget-action.action-cell-button',\r\n            multiple: true,\r\n            hasShowCondition: true\r\n        },\r\n        'rowClick': {\r\n            name: 'widget-action.row-click',\r\n            multiple: false\r\n        }\r\n    };\r\n}\r\n\r\nself.onDestroy = function() {\r\n    // Cleanup when the widget is destroyed\r\n}\r\n\r\n// Function to update the table with device and temperature data\r\nfunction updateTable(data) {\r\n    var tableHtml = '<table><thead><tr><th>Devices</th><th>Amperage</th><th>Consumption10</th><th>Current</th><th>Consumption3</th><th>Energy</th><th>Energy10</th></tr></thead><tbody>';\r\n\r\n    data.forEach(function(row) {\r\n        var deviceName = row.entityName || 'Unknown Device'; // Ensure entityName is used as device name\r\n        var amperage = getValue(row, 'amperage');\r\n        var consumption10 = getValue(row, 'consumption10');\r\n        var current = getValue(row, 'current');\r\n        var consumption3 = getValue(row, 'consumption3');\r\n        var energy = getValue(row, 'energy');\r\n        var energy10 = getValue(row, 'energy10');\r\n\r\n        tableHtml += '<tr><td>' + deviceName + '</td><td>' + amperage + '</td><td>' + consumption10 + '</td><td>' + current + '</td><td>' + consumption3 + '</td><td>' + energy + '</td><td>' + energy10 + '</td></tr>';\r\n    });\r\n\r\n    tableHtml += '</tbody></table>';\r\n    self.ctx.$container.html(tableHtml); // Update the container with the new table\r\n}\r\n\r\n// Helper function to get the latest value for a given key\r\nfunction getValue(row, key) {\r\n    return row.data[key] && row.data[key].length > 0 ? row.data[key][0][1] : 'N/A';\r\n}\r\n",
+      "settingsSchema" : "",
+      "dataKeySettingsSchema" : "",
+      "latestDataKeySettingsSchema" : "",
+      "settingsDirective" : "tb-timeseries-table-widget-settings",
+      "dataKeySettingsDirective" : "tb-timeseries-table-key-settings",
+      "latestDataKeySettingsDirective" : "tb-timeseries-table-latest-key-settings",
+      "hasBasicMode" : true,
+      "basicModeDirective" : "tb-timeseries-table-basic-config",
+      "defaultConfig" : "{\"datasources\":[{\"type\":\"function\",\"name\":\"function\",\"entityAliasId\":null,\"filterId\":null,\"dataKeys\":[{\"name\":\"f(x)\",\"type\":\"function\",\"label\":\"Temperature  °C\",\"color\":\"#2196f3\",\"settings\":{\"useCellStyleFunction\":true,\"cellStyleFunction\":\"if (value) {\\n    var percent = (value + 60)/120 * 100;\\n    var color = tinycolor.mix('blue', 'red', percent);\\n    color.setAlpha(.5);\\n    return {\\n      paddingLeft: '20px',\\n      color: '#ffffff',\\n      background: color.toRgbString(),\\n      fontSize: '18px'\\n    };\\n} else {\\n    return {};\\n}\",\"useCellContentFunction\":false},\"_hash\":0.8587686344902596,\"funcBody\":\"var value = prevValue + Math.random() * 40 - 20;\\nvar multiplier = Math.pow(10, 1 || 0);\\nvar value = Math.round(value * multiplier) / multiplier;\\nif (value < -60) {\\n\\tvalue = -60;\\n} else if (value > 60) {\\n\\tvalue = 60;\\n}\\nreturn value;\",\"units\":null,\"decimals\":null,\"usePostProcessing\":null,\"postFuncBody\":null},{\"name\":\"f(x)\",\"type\":\"function\",\"label\":\"Humidity, %\",\"color\":\"#ffc107\",\"settings\":{\"useCellStyleFunction\":true,\"cellStyleFunction\":\"if (value) {\\n    var percent = value;\\n    var backgroundColor = tinycolor('blue');\\n    backgroundColor.setAlpha(value/100);\\n    var color = 'blue';\\n    if (value > 50) {\\n        color = 'white';\\n    }\\n    \\n    return {\\n      paddingLeft: '20px',\\n      color: color,\\n      background: backgroundColor.toRgbString(),\\n      fontSize: '18px'\\n    };\\n} else {\\n    return {};\\n}\",\"useCellContentFunction\":false},\"_hash\":0.12775350966079668,\"funcBody\":\"var value = prevValue + Math.random() * 20 - 10;\\nvar multiplier = Math.pow(10, 1 || 0);\\nvar value = Math.round(value * multiplier) / multiplier;\\nif (value < 5) {\\n\\tvalue = 5;\\n} else if (value > 100) {\\n\\tvalue = 100;\\n}\\nreturn value;\"}],\"latestDataKeys\":null}],\"timewindow\":{\"realtime\":{\"interval\":1000,\"timewindowMs\":60000},\"aggregation\":{\"type\":\"NONE\",\"limit\":200}},\"showTitle\":true,\"backgroundColor\":\"rgb(255, 255, 255)\",\"color\":\"rgba(0, 0, 0, 0.87)\",\"padding\":\"8px\",\"settings\":{\"showTimestamp\":true,\"displayPagination\":true,\"defaultPageSize\":10},\"title\":\"new\",\"dropShadow\":true,\"enableFullscreen\":true,\"titleStyle\":{\"fontSize\":\"16px\",\"fontWeight\":400,\"padding\":\"5px 10px 5px 10px\"},\"useDashboardTimewindow\":false,\"showLegend\":false,\"widgetStyle\":{},\"actions\":{},\"showTitleIcon\":false,\"iconColor\":\"rgba(0, 0, 0, 0.87)\",\"iconSize\":\"24px\",\"displayTimewindow\":true,\"configMode\":\"basic\"}"
+    },
+    "externalId" : {
+      "entityType" : "WIDGET_TYPE",
+      "id" : "604334f0-3def-11ef-b7c9-e56b44b4df5b"
+    },
+    "resources" : null,
+    "id" : {
+      "entityType" : "WIDGET_TYPE",
+      "id" : "604334f0-3def-11ef-b7c9-e56b44b4df5b"
+    },
+    "scada" : false,
+    "tags" : null
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

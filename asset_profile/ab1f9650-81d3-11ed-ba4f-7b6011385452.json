@@ -1,0 +1,25 @@
+{
+  "entityType" : "ASSET_PROFILE",
+  "entity" : {
+    "default" : true,
+    "defaultDashboardId" : null,
+    "defaultEdgeRuleChainId" : null,
+    "defaultQueueName" : null,
+    "defaultRuleChainId" : null,
+    "description" : "Default asset profile",
+    "externalId" : {
+      "entityType" : "ASSET_PROFILE",
+      "id" : "ab1f9650-81d3-11ed-ba4f-7b6011385452"
+    },
+    "id" : {
+      "entityType" : "ASSET_PROFILE",
+      "id" : "ab1f9650-81d3-11ed-ba4f-7b6011385452"
+    },
+    "image" : null,
+    "name" : "default"
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

@@ -1,0 +1,123 @@
+{
+  "entityType" : "DEVICE",
+  "entity" : {
+    "additionalInfo" : null,
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "13814000-1dd2-11b2-8080-808080808080"
+    },
+    "deviceData" : {
+      "configuration" : {
+        "type" : "DEFAULT"
+      },
+      "transportConfiguration" : {
+        "type" : "DEFAULT"
+      }
+    },
+    "deviceProfileId" : {
+      "entityType" : "DEVICE_PROFILE",
+      "id" : "124e3b31-1fb2-11ed-81a4-2b2b09d2b04f"
+    },
+    "externalId" : {
+      "entityType" : "DEVICE",
+      "id" : "12885e00-1fb2-11ed-81a4-2b2b09d2b04f"
+    },
+    "firmwareId" : null,
+    "id" : {
+      "entityType" : "DEVICE",
+      "id" : "12885e00-1fb2-11ed-81a4-2b2b09d2b04f"
+    },
+    "label" : null,
+    "name" : "Energy meter",
+    "ownerId" : null,
+    "softwareId" : null,
+    "type" : "energy-meter"
+  },
+  "credentials" : {
+    "credentialsId" : "W6qJviMvhSOUdUNL1wep",
+    "credentialsType" : "ACCESS_TOKEN",
+    "credentialsValue" : null
+  },
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "125a7030-1fb2-11ed-81a4-2b2b09d2b04f"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "12885e00-1fb2-11ed-81a4-2b2b09d2b04f"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON",
+    "version" : 0
+  } ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : false,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "active",
+      "lastUpdateTs" : 1661371071067,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "inactivityAlarmTime",
+      "lastUpdateTs" : 1661371071067,
+      "longValue" : 1661371071064,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "lastActivityTime",
+      "lastUpdateTs" : 1661370471960,
+      "longValue" : 1661370470379,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "lastConnectTime",
+      "lastUpdateTs" : 1661353676208,
+      "longValue" : 1661353676208,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "lastDisconnectTime",
+      "lastUpdateTs" : 1661370470381,
+      "longValue" : 1661370470381,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "type",
+      "lastUpdateTs" : 1660908519441,
+      "longValue" : null,
+      "strValue" : "energy-meter"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : 0.2,
+      "jsonValue" : null,
+      "key" : "xPos",
+      "lastUpdateTs" : 1660908519441,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : 0.4,
+      "jsonValue" : null,
+      "key" : "yPos",
+      "lastUpdateTs" : 1660908519441,
+      "longValue" : null,
+      "strValue" : null
+    } ],
+    "SHARED_SCOPE" : [ ]
+  }
+}

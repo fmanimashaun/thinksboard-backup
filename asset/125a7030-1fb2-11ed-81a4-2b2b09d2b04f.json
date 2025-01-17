@@ -1,0 +1,88 @@
+{
+  "entityType" : "ASSET",
+  "entity" : {
+    "additionalInfo" : null,
+    "assetProfileId" : {
+      "entityType" : "ASSET_PROFILE",
+      "id" : "db10b060-81d3-11ed-ba4f-7b6011385452"
+    },
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "13814000-1dd2-11b2-8080-808080808080"
+    },
+    "externalId" : {
+      "entityType" : "ASSET",
+      "id" : "125a7030-1fb2-11ed-81a4-2b2b09d2b04f"
+    },
+    "id" : {
+      "entityType" : "ASSET",
+      "id" : "125a7030-1fb2-11ed-81a4-2b2b09d2b04f"
+    },
+    "label" : "Office",
+    "name" : "Office",
+    "ownerId" : null,
+    "type" : "office"
+  },
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "125a7030-1fb2-11ed-81a4-2b2b09d2b04f"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "12885e00-1fb2-11ed-81a4-2b2b09d2b04f"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON",
+    "version" : 0
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "125a7030-1fb2-11ed-81a4-2b2b09d2b04f"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "129619a0-1fb2-11ed-81a4-2b2b09d2b04f"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON",
+    "version" : 0
+  } ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "address",
+      "lastUpdateTs" : 1660908519126,
+      "longValue" : null,
+      "strValue" : "246 Bowery New York NY 10012 United States"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "email",
+      "lastUpdateTs" : 1660908519126,
+      "longValue" : null,
+      "strValue" : "support@office-center.com"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "floorPlan",
+      "lastUpdateTs" : 1660908519126,
+      "longValue" : null,
+      "strValue" : "https://thingsboard.io/images/dashboards/smart-building/office-floor-plan.jpg"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "phone",
+      "lastUpdateTs" : 1660908519126,
+      "longValue" : null,
+      "strValue" : "+1112223334"
+    } ]
+  }
+}

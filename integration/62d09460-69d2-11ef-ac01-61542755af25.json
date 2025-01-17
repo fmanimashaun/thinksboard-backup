@@ -1,0 +1,69 @@
+{
+  "entityType" : "INTEGRATION",
+  "entity" : {
+    "additionalInfo" : null,
+    "allowCreateDevicesOrAssets" : true,
+    "configuration" : {
+      "metadata" : { },
+      "baseUrl" : "https://thingsboard.cloud",
+      "httpEndpoint" : "https://thingsboard.cloud/api/v1/integrations/http/87de146c-0c7f-9ea9-2bcd-8e23b8cab832",
+      "enableSecurity" : false,
+      "headersFilter" : { },
+      "replaceNoContentToOk" : false
+    },
+    "debugMode" : false,
+    "debugSettings" : {
+      "allEnabled" : false,
+      "allEnabledUntil" : 1736836374660,
+      "failuresEnabled" : true
+    },
+    "defaultConverterId" : {
+      "entityType" : "CONVERTER",
+      "id" : "a2ca39d0-6910-11ef-8b7a-ad9178d674f1"
+    },
+    "downlinkConverterId" : null,
+    "edgeTemplate" : false,
+    "enabled" : true,
+    "externalId" : {
+      "entityType" : "INTEGRATION",
+      "id" : "62d09460-69d2-11ef-ac01-61542755af25"
+    },
+    "id" : {
+      "entityType" : "INTEGRATION",
+      "id" : "62d09460-69d2-11ef-ac01-61542755af25"
+    },
+    "name" : "HTTP integration",
+    "remote" : false,
+    "routingKey" : "87de146c-0c7f-9ea9-2bcd-8e23b8cab832",
+    "secret" : "sjt6xtxmdn2nnpwj7sj1",
+    "type" : "HTTP"
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : "{\"success\":true}",
+      "key" : "integration_status_tb-ie-main-0",
+      "lastUpdateTs" : 1736835673317,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : "{\"success\":true}",
+      "key" : "integration_status_tb-ie-main-1",
+      "lastUpdateTs" : 1736835702959,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : "{\"success\":true}",
+      "key" : "integration_status_tb-ie-main-2",
+      "lastUpdateTs" : 1736835745244,
+      "longValue" : null,
+      "strValue" : null
+    } ]
+  }
+}

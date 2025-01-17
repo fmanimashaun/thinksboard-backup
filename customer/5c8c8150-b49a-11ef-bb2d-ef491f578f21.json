@@ -1,0 +1,37 @@
+{
+  "entityType" : "CUSTOMER",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : "",
+      "allowWhiteLabeling" : true,
+      "homeDashboardId" : null,
+      "homeDashboardHideToolbar" : false
+    },
+    "address" : null,
+    "address2" : null,
+    "city" : null,
+    "country" : "Nigeria",
+    "customMenuId" : null,
+    "customerId" : null,
+    "email" : null,
+    "externalId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "5c8c8150-b49a-11ef-bb2d-ef491f578f21"
+    },
+    "id" : {
+      "entityType" : "CUSTOMER",
+      "id" : "5c8c8150-b49a-11ef-bb2d-ef491f578f21"
+    },
+    "name" : "NLNG",
+    "ownerId" : null,
+    "parentCustomerId" : null,
+    "phone" : null,
+    "state" : null,
+    "title" : "NLNG",
+    "zip" : null
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "entityType" : "ROLE",
+  "entity" : {
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "13814000-1dd2-11b2-8080-808080808080"
+    },
+    "externalId" : {
+      "entityType" : "ROLE",
+      "id" : "7890ca50-2efa-11ed-914b-27b29813fb71"
+    },
+    "name" : "new",
+    "permissions" : {
+      "ALARM" : [ "ALL" ],
+      "DASHBOARD" : [ "READ", "READ_ATTRIBUTES" ],
+      "SCHEDULER_EVENT" : [ "READ", "READ_ATTRIBUTES" ],
+      "DEVICE_GROUP" : [ "READ", "READ_ATTRIBUTES" ],
+      "PROFILE" : [ "ALL" ],
+      "API_USAGE_STATE" : [ "ALL" ]
+    },
+    "type" : "GENERIC",
+    "additionalInfo" : {
+      "description" : ""
+    },
+    "id" : {
+      "entityType" : "ROLE",
+      "id" : "7890ca50-2efa-11ed-914b-27b29813fb71"
+    },
+    "ownerId" : null
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

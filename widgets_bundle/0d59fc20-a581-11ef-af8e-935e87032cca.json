@@ -1,0 +1,25 @@
+{
+  "entityType" : "WIDGETS_BUNDLE",
+  "entity" : {
+    "alias" : "trendz_bundle",
+    "description" : "Display views created in Trendz Analytics to share analysis results.",
+    "externalId" : {
+      "entityType" : "WIDGETS_BUNDLE",
+      "id" : "0d59fc20-a581-11ef-af8e-935e87032cca"
+    },
+    "id" : {
+      "entityType" : "WIDGETS_BUNDLE",
+      "id" : "0d59fc20-a581-11ef-af8e-935e87032cca"
+    },
+    "image" : "tb-image;/api/images/tenant/trendz_bundle_bundle_image.png",
+    "name" : "Trendz Bundle",
+    "order" : null,
+    "scada" : false,
+    "title" : "Trendz Bundle"
+  },
+  "fqns" : [ "trendz_bundle.trendz_builder", "trendz_bundle.trendz_view_static", "trendz_bundle.trendz_view_latest" ],
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "entityType" : "ROLE",
+  "entity" : {
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "13814000-1dd2-11b2-8080-808080808080"
+    },
+    "externalId" : {
+      "entityType" : "ROLE",
+      "id" : "42790940-222b-11ed-81a4-2b2b09d2b04f"
+    },
+    "name" : "viewonly",
+    "permissions" : {
+      "DASHBOARD_GROUP" : [ "READ", "READ_ATTRIBUTES", "READ_TELEMETRY" ],
+      "DASHBOARD" : [ "READ_TELEMETRY", "READ_ATTRIBUTES", "READ" ]
+    },
+    "type" : "GENERIC",
+    "additionalInfo" : {
+      "description" : ""
+    },
+    "id" : {
+      "entityType" : "ROLE",
+      "id" : "42790940-222b-11ed-81a4-2b2b09d2b04f"
+    },
+    "ownerId" : null
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

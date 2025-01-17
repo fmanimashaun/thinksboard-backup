@@ -1,0 +1,44 @@
+{
+  "entityType" : "ENTITY_GROUP",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : "Allen, Opebi, Ajose, Abuja ENergy Dashboad",
+      "isPublic" : false,
+      "publicCustomerId" : ""
+    },
+    "configuration" : {
+      "columns" : [ {
+        "type" : "ENTITY_FIELD",
+        "key" : "created_time",
+        "sortOrder" : "DESC"
+      }, {
+        "type" : "ENTITY_FIELD",
+        "key" : "title",
+        "sortOrder" : "NONE"
+      } ],
+      "settings" : { },
+      "actions" : { }
+    },
+    "edgeGroupAll" : false,
+    "externalId" : {
+      "entityType" : "ENTITY_GROUP",
+      "id" : "56a71ab0-2393-11ed-b3d7-ab40826c689b"
+    },
+    "groupAll" : false,
+    "id" : {
+      "entityType" : "ENTITY_GROUP",
+      "id" : "56a71ab0-2393-11ed-b3d7-ab40826c689b"
+    },
+    "name" : "Stanbic Energy Dashboards",
+    "ownerId" : {
+      "entityType" : "TENANT",
+      "id" : "27ac7550-1f03-11ed-b3d7-ab40826c689b"
+    },
+    "type" : "DASHBOARD"
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  },
+  "groupEntities" : true
+}

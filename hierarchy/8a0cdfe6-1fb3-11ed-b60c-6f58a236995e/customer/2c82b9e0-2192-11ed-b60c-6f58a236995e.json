@@ -1,0 +1,46 @@
+{
+  "entityType" : "CUSTOMER",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : "",
+      "allowWhiteLabeling" : true,
+      "homeDashboardId" : null,
+      "homeDashboardHideToolbar" : true
+    },
+    "address" : null,
+    "address2" : null,
+    "city" : null,
+    "country" : null,
+    "customMenuId" : null,
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "8a0cdfe6-1fb3-11ed-b60c-6f58a236995e"
+    },
+    "email" : "essaboliyy@gmail.cpm",
+    "externalId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "2c82b9e0-2192-11ed-b60c-6f58a236995e"
+    },
+    "id" : {
+      "entityType" : "CUSTOMER",
+      "id" : "2c82b9e0-2192-11ed-b60c-6f58a236995e"
+    },
+    "name" : "Essien",
+    "ownerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "8a0cdfe6-1fb3-11ed-b60c-6f58a236995e"
+    },
+    "parentCustomerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "8a0cdfe6-1fb3-11ed-b60c-6f58a236995e"
+    },
+    "phone" : null,
+    "state" : null,
+    "title" : "Essien",
+    "zip" : null
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

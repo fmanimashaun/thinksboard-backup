@@ -1,0 +1,33 @@
+{
+  "entityType" : "CONVERTER",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : ""
+    },
+    "configuration" : {
+      "decoder" : "/** Decoder **/\r\n\r\n// decode payload to string\r\nvar payloadStr = decodeToString(payload);\r\nvar data = JSON.parse(payloadStr);\r\nvar topicPattern = 'Energy';\r\n\r\nvar deviceName =  metadata.topic.match(topicPattern)[1];\r\n// decode payload to JSON\r\nvar deviceType = 'Energy';\r\n\r\n// Result object with device attributes/telemetry data\r\nvar result = {\r\n   deviceName: \"Device A\",\r\n   deviceType: \"thermostat\",\r\n   attributes: {\r\n       integrationName: metadata['integrationName'],\r\n   },\r\n   telemetry: {\r\n       Energy: data.value,\r\n   }\r\n};\r\n\r\n/** Helper functions **/\r\n\r\nfunction decodeToString(payload) {\r\n   return String.fromCharCode.apply(String, payload);\r\n}\r\n\r\nfunction decodeToJson(payload) {\r\n   // convert payload to string.\r\n   var str = decodeToString(payload);\r\n\r\n   // parse string to JSON\r\n   var data = JSON.parse(str);\r\n   return data;\r\n}\r\n\r\nreturn result;",
+      "encoder" : null
+    },
+    "debugMode" : false,
+    "debugSettings" : {
+      "allEnabled" : false,
+      "allEnabledUntil" : 1736836374660,
+      "failuresEnabled" : true
+    },
+    "edgeTemplate" : false,
+    "externalId" : {
+      "entityType" : "CONVERTER",
+      "id" : "805c91c0-21de-11ed-81a4-2b2b09d2b04f"
+    },
+    "id" : {
+      "entityType" : "CONVERTER",
+      "id" : "805c91c0-21de-11ed-81a4-2b2b09d2b04f"
+    },
+    "name" : "Mqtt Uplink",
+    "type" : "UPLINK"
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}
